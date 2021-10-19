@@ -1,3 +1,3 @@
-const teste = a => {
-
+const teste = a  => {
+  
 }
