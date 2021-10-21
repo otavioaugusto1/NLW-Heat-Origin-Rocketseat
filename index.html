@@ -24,7 +24,7 @@
           <img src="images/fotoMinha.jpeg" alt="Minha foto" />
         </div>
 
-        <h1>Otávio Nogueira</h1>
+        <h1 id="userName">Otávio Nogueira</h1>
         <a href="https://github.com/otavioaugusto1">
           <img src="images/github.svg" alt="Ícone github" />
           otavio.gon
@@ -34,8 +34,8 @@
           <br />
           Igniter na @Rocketseat.
         </p>
-        <ul>
-          <li>
+        <ul id="socialLinks">
+          <li class="youtube">
             <a
               href="https://www.youtube.com/channel/UCO2bUAnqz3gFPmRgDlNEz5Q/featured"
               target="_blank"
@@ -43,19 +43,19 @@
               <img src="images/youtube.svg" alt="ícone Youtube" />
             </a>
           </li>
-          <li>
+          <li class="facebook">
             <a
               href="https://www.facebook.com/otavio.nogueira.752/"
               target="_blank"
             >
               <img src="images/facebook.svg" alt="ícone Facebook" />
             </a>
-          </li>
+          </li class = "instagram">
           <li>
             <a href="https://www.instagram.com/otavio.gon/" target="_blank">
               <img src="images/instagram.svg" alt="ícone Instagram" />
             </a>
-          </li>
+          </li class = "twitter">
           <li>
             <a href="https://twitter.com/OtvioAugustoGo9" target="_blank">
               <img src="images/twitter.svg" alt="ícone twitter" />
@@ -64,5 +64,24 @@
         </ul>
       </div>
     </main>
+    <script>
+      
+      const linksSocialMedia = {
+      github : "otavioaugusto1",
+      instagram : "otavio.gon",
+      facebook : "otavio.nogueira.752",
+      twitter : "OtvioAugustoGo9"
+      }
+
+      function changeSocialMediaLinks(){
+        for(let li of socialLinks.childre){
+          const social = li.getAttribute('class')
+          li.children[0].href  = `https://www.${social}.com/${linksSocialMedia[social]}`
+
+        }
+      }
+      changeSocialMediaLinks()
+      
+    </script>
   </body>
 </html>
